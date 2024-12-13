@@ -11,10 +11,12 @@ public class Gun_Controller_script : MonoBehaviour
     public GameObject BulletPrefab;
     public float bulletspeed = 10;
     public Button firebutton;
+    public GameObject muzzle;
+    public float muzzletime = 0.1f;
     private void Start()
     {
         originalScale = transform.localScale;
-        firebutton.onClick.AddListener(shoot);
+        firebutton.onClick.AddListener(triggershoot);
     }
 
     void Update()
@@ -45,8 +47,11 @@ public class Gun_Controller_script : MonoBehaviour
             transform.localScale = new Vector3(-originalScale.x, -originalScale.y, originalScale.z);
         }
     }
-    void shoot()
+    IEnumerator shoot()
     {
+        muzzle.SetActive(true);
+        yield return new WaitForSeconds(muzzletime);
+        muzzle.SetActive(false);
         GameObject bullet = Instantiate(BulletPrefab, gunTransform.position, gunTransform.rotation);
         Vector2 shootingDirection = gunTransform.right;
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -55,5 +60,9 @@ public class Gun_Controller_script : MonoBehaviour
             rb.velocity = shootingDirection * bulletspeed; // Gắn tốc độ cho viên đạn
         }
         Destroy(bullet, 7);
+    }
+    void triggershoot()
+    {
+        StartCoroutine(shoot());
     }
 }
