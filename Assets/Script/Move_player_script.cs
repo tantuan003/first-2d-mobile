@@ -7,9 +7,13 @@ public class Move_player_script : MonoBehaviour
     public Joystick joystick;
     public float speed = 10;
     private Vector3 originalScale;
+    public Rigidbody2D rb;
+    public Animator animator;
     void Start()
     {
         originalScale = transform.localScale;
+        animator.SetBool("walking",false);
+        animator.SetBool("ide", true);
     }
 
     // Update is called once per frame
@@ -29,6 +33,17 @@ public class Move_player_script : MonoBehaviour
         {     
         
             transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
+        }
+        if(rb.velocity.magnitude == 0)
+        {
+            animator.SetBool("ide", true);
+            animator.SetBool("walking", false);
+
+        }
+        else
+        {
+            animator.SetBool("ide",false);
+            animator.SetBool("walking", true);
         }
     }
 }

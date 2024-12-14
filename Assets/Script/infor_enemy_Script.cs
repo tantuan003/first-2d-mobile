@@ -5,6 +5,8 @@ using UnityEngine;
 public class infor_enemy_Script : MonoBehaviour
 {
     public int health = 30;
+    public Animator animator;
+    private float dieAnimationTime = 0.933f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,10 @@ public class infor_enemy_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (health <= 0)
+        {
+            animator.SetBool("die", true);
+        }
     }
     public void TakeDamage(int damage)
     {
@@ -30,6 +35,12 @@ public class infor_enemy_Script : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy died");
+        animator.SetBool("die", true);
+        StartCoroutine(DestroyAfterDelay());
+    }
+    IEnumerator DestroyAfterDelay()
+    {
+        yield return new WaitForSeconds(dieAnimationTime);
         Destroy(gameObject);
     }
 }
