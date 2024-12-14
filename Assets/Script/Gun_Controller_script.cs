@@ -17,6 +17,7 @@ public class Gun_Controller_script : MonoBehaviour
     {
         originalScale = transform.localScale;
         firebutton.onClick.AddListener(triggershoot);
+       
     }
 
     void Update()
@@ -57,7 +58,7 @@ public class Gun_Controller_script : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.velocity = shootingDirection * bulletspeed; // Gắn tốc độ cho viên đạn
+            rb.velocity = shootingDirection * bulletspeed;
         }
         Destroy(bullet, 7);
     }
