@@ -20,9 +20,13 @@ public class dame_bullet_Script : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            infor_enemy_Script health =collision.GetComponent<infor_enemy_Script>();
-            health.TakeDamage(damge);
+            infor_enemy_Script health = collision.GetComponent<infor_enemy_Script>();
+            if(health != null)
+            {
+                health.TakeDamage(damge);
+            }         
             Destroy(gameObject);
         }
     }
+    
 }
