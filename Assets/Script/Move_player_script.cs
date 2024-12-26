@@ -46,17 +46,16 @@ public class Move_player_script : MonoBehaviour
             transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
         }
 
-        // Cập nhật animation
-        if (rb.velocity.magnitude == 0)
+        if (Mathf.Abs(horizontal) > 0.1f || Mathf.Abs(vertical) > 0.1f)
         {
-            animator.SetBool("ide", true);
-            animator.SetBool("walking", false);
+            animator.SetBool("ide", false);
+            animator.SetBool("walk", true);
         }
         else
         {
-            animator.SetBool("ide", false);
-            animator.SetBool("walking", true);
-        }    
+            animator.SetBool("ide", true);
+            animator.SetBool("walk", false);
+        }
     }
 
     // Kiểm tra va chạm với mặt đất

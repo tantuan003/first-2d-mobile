@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 0dcad4363a096714bb528cdf74bb28ea
+guid: e0b600712a0d41742a8fae6f0dafdee9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6693976738416901944
-    second: walk_3_0
+      213: 8794099244795379612
+    second: Enemy3_5_0
   - first:
-      213: -2412864962344360815
-    second: walk_3_1
+      213: 8252075889250927882
+    second: Enemy3_5_1
+  - first:
+      213: 3605721661275413630
+    second: Enemy3_5_2
+  - first:
+      213: -5007472485108542308
+    second: Enemy3_5_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -116,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk_3_0
+      name: Enemy3_5_0
       rect:
         serializedVersion: 2
-        x: 746
-        y: 289
-        width: 518
-        height: 694
+        x: 506
+        y: 249
+        width: 828
+        height: 619
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,18 +136,60 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c0cee36f973a13a0800000000000000
-      internalID: -6693976738416901944
+      spriteID: c9f3f858baaea0a70800000000000000
+      internalID: 8794099244795379612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_3_1
+      name: Enemy3_5_1
       rect:
         serializedVersion: 2
-        x: 1035
-        y: 298
+        x: 700
+        y: 315
+        width: 627
+        height: 555
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a050e56cc43458270800000000000000
+      internalID: 8252075889250927882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3_5_2
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 262
+        width: 92
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c904b3fb81a0230800000000000000
+      internalID: 3605721661275413630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy3_5_3
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 263
         width: 90
         height: 60
       alignment: 0
@@ -151,8 +199,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1946a74c918c38ed0800000000000000
-      internalID: -2412864962344360815
+      spriteID: c9410963e42e18ab0800000000000000
+      internalID: -5007472485108542308
       vertices: []
       indices: 
       edges: []
@@ -160,7 +208,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 9fc4827125f901441bd7bd19408f4893
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -168,8 +216,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walk_3_0: -6693976738416901944
-      walk_3_1: -2412864962344360815
+      Enemy3_5_0: 8794099244795379612
+      Enemy3_5_1: 8252075889250927882
+      Enemy3_5_2: 3605721661275413630
+      Enemy3_5_3: -5007472485108542308
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
