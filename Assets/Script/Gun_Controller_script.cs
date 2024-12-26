@@ -53,7 +53,8 @@ public class Gun_Controller_script : MonoBehaviour
         muzzle.SetActive(true);
         yield return new WaitForSeconds(muzzletime);
         muzzle.SetActive(false);
-        GameObject bullet = Instantiate(BulletPrefab, gunTransform.position, gunTransform.rotation);
+        Vector3 spawnPosition = gunTransform.position + gunTransform.right * 1f; 
+        GameObject bullet = Instantiate(BulletPrefab, spawnPosition, gunTransform.rotation);
         Vector2 shootingDirection = gunTransform.right;
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
@@ -65,5 +66,10 @@ public class Gun_Controller_script : MonoBehaviour
     void triggershoot()
     {
         StartCoroutine(shoot());
+    }
+    public void changeBullet(GameObject newbullet)
+    {
+        BulletPrefab = newbullet;
+        Debug.Log("Bullet type changed to: " + newbullet.name);
     }
 }

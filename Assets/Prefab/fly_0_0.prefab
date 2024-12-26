@@ -180,6 +180,8 @@ MonoBehaviour:
   movedirection: {x: -1, y: 0, z: 0}
   player: {fileID: 0}
   animator: {fileID: -212132358226400400}
+  damage: 45
+  damageInterval: 1
 --- !u!95 &-212132358226400400
 Animator:
   serializedVersion: 7
@@ -190,7 +192,7 @@ Animator:
   m_GameObject: {fileID: 553411971376465247}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 046825f6a858edb4cad0347d10ae0021, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

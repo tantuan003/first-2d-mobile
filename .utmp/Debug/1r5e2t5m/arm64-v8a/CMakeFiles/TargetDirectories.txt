@@ -1,0 +1,8 @@
+D:/Unity/project/First- With-2D-Mobile/.utmp/Debug/1r5e2t5m/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/Unity/project/First- With-2D-Mobile/.utmp/Debug/1r5e2t5m/arm64-v8a/CMakeFiles/rebuild_cache.dir
+D:/Unity/project/First- With-2D-Mobile/.utmp/Debug/1r5e2t5m/arm64-v8a/GameActivity/CMakeFiles/game.dir
+D:/Unity/project/First- With-2D-Mobile/.utmp/Debug/1r5e2t5m/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+D:/Unity/project/First- With-2D-Mobile/.utmp/Debug/1r5e2t5m/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+D:/Unity/project/First- With-2D-Mobile/.utmp/Debug/1r5e2t5m/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+D:/Unity/project/First- With-2D-Mobile/.utmp/Debug/1r5e2t5m/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+D:/Unity/project/First- With-2D-Mobile/.utmp/Debug/1r5e2t5m/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

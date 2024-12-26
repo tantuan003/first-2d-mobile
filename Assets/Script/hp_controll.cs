@@ -5,23 +5,29 @@ using UnityEngine.UI;
 
 public class hp_controll : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public RectTransform foregroundTransform; // Thanh máu phía trước
-    public RectTransform backgroundTransform;
-    private float originalWidth;
+    public Slider healthSlider; // Thanh Slider
+    public int maxHealth = 100;
+    private int currentHealth;
+
     void Start()
     {
-        originalWidth = backgroundTransform.sizeDelta.x;
-        foregroundTransform.pivot = new Vector2(0, 0.5f);
+        currentHealth = maxHealth;
+        healthSlider.maxValue = maxHealth;
+        healthSlider.value = currentHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeDamage(int damage)
     {
-        
+        currentHealth -= damage;
+        currentHealth = Mathf.Max(0, currentHealth);
+        healthSlider.value = currentHealth;
     }
-    public void SetHealth(float healthPercentage)
+
+    public void Heal(int healingAmount)
     {
-        foregroundTransform.sizeDelta = new Vector2(originalWidth * healthPercentage, foregroundTransform.sizeDelta.y);
+        currentHealth += healingAmount;
+        currentHealth = Mathf.Min(maxHealth, currentHealth);
+        healthSlider.value = currentHealth;
     }
+
 }

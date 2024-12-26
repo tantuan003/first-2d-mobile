@@ -18,7 +18,6 @@ public class Move_player_script : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         originalScale = transform.localScale;
-        animator.SetBool("walking", false);
         animator.SetBool("ide", true);
         isGrounded = true;
 

@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 6698816943851487893, guid: 509cb6d17edd66c49b4a133f8f483414, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -199,8 +199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  speed: 2
-  stopDistance: 5
+  speed: 6
+  stopDistance: 1
 --- !u!114 &-3659945763561500895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,3 +217,6 @@ MonoBehaviour:
   animator: {fileID: 6739735640672503560}
   damage: 65
   damageInterval: 1
+  isSpecialEnemy: 0
+  bullet2: {fileID: 0}
+  spawnPosition: {fileID: 0}
